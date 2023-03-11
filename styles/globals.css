@@ -3,12 +3,14 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Grotesk-Pro";
+  font-family: "Satoshi-Variable";
   src: url("../public/fonts/Satoshi-Variable.ttf");
 }
 
+
+
 * {
-  font-family: "Grotesk-Pro", sans-serif;
+  font-family: "Satoshi-Variable", sans-serif;
 }
 
 .bg-primary{
@@ -62,4 +64,9 @@
     top: 90%;
     opacity: 0;
   }
+}
+
+.project-card:hover .redirect-button {
+  opacity: 1;
+  transform: translateY(0);
 }

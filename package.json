@@ -6,10 +6,12 @@
     "start": "next start"
   },
   "dependencies": {
+    "form-validation-react": "^1.4.7",
     "framer-motion": "^10.2.4",
     "next": "latest",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icons": "^4.8.0"
   },
   "devDependencies": {
     "@types/node": "18.11.3",
