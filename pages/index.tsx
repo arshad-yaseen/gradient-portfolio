@@ -3,6 +3,8 @@ import Head from "next/head";
 import ProfileImage from "../public/images/profile.png";
 import Hero from "../components/Hero";
 import About from "../components/About";
+import Projects from "../components/Projects";
+import Experience from "../components/Experience";
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +17,8 @@ const Home: NextPage = () => {
       <main className="flex flex-col items-center justify-center flex-1 px-20 text-center">
         <Hero />
         <About />
+        <Projects />
+        <Experience />
       </main>
     </div>
   );

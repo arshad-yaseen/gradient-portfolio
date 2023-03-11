@@ -3,7 +3,6 @@ import {
   motion,
 } from "framer-motion";
 import Image from "next/image";
-import HeroGradient from "../public/svgs/herogradient.svg";
 import ProjectImage1 from "../public/images/projects/projectimage1.webp";
 import ProjectImage2 from "../public/images/projects/projectimage2.webp";
 import ProjectImage3 from "../public/images/projects/projectimage3.webp";
@@ -11,12 +10,13 @@ import ProjectImage4 from "../public/images/projects/projectimage4.webp";
 
 function About() {
   return (
-    <div className="w-[100vw] z-50 h-screen bg-primary relative overflow-hidden">
+    <div className="w-[100vw] z-50 h-screen bg-primary relative ">
       <div className="projects-gallery-section h-[32vh] w-full   flex">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <motion.div 
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ type: "just", delay: 0 }}
+          transition={{ type: "spring",stiffness:30, delay: 0 }}
+          viewport={{ once: true }}
           className="project-image-wrapper h-full w-[600px] overflow-hidden  cursor-pointer hover:opacity-60 transition-opacity"
         >
           <Image
@@ -26,9 +26,10 @@ function About() {
           />
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ type: "just", delay: 0.2 }}
+          transition={{ type: "spring",stiffness:30, delay: 0.2 }}
+          viewport={{ once: true }}
           className="project-image-wrapper h-full w-[600px] overflow-hidden  cursor-pointer hover:opacity-60 transition-opacity"
         >
           <Image
@@ -37,10 +38,11 @@ function About() {
             className="transition-all duration-300 opacity-70 hover:scale-105 hover:opacity-50"
           />
         </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <motion.div 
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ type: "just", delay: 0.4 }}
+          transition={{ type: "spring",stiffness:30, delay: 0.4 }}
+          viewport={{ once: true }}
           className="project-image-wrapper h-full w-[600px] overflow-hidden  cursor-pointer hover:opacity-60 transition-opacity"
         >
           <Image
@@ -49,10 +51,12 @@ function About() {
             className="transition-all duration-300 opacity-70 hover:scale-105 hover:opacity-50"
           />
         </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+       
+        <motion.div 
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ type: "just", delay: 0.6 }}
+          transition={{ type: "spring",stiffness:30, delay: 0.6 }}
+          viewport={{ once: true }}
           className="project-image-wrapper h-full w-[600px] overflow-hidden  cursor-pointer hover:opacity-60 transition-opacity"
         >
           <Image
@@ -64,11 +68,11 @@ function About() {
       </div>
 
       <div className="h-full w-full  flex flex-col items-center pt-16">
-        <motion.h1 initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{ type: "just", delay: 0.4 }} className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#56DEF0] to-[#AFFD5A]">
+        <motion.h1 viewport={{ once: true }} initial={{opacity:0}} whileInView={{opacity:1}} transition={{ type: "spring",stiffness:30, delay: 0.5 }} className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#56DEF0] to-[#AFFD5A]">
           About me
         </motion.h1>
 
-        <motion.p initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{ type: "just", delay: 0.6 }} className="bg-clip-text text-transparent bg-gradient-to-br mt-10 text-xl from-white to-slate-400 sm:w-[950px] w-[300px]">
+        <motion.p viewport={{ once: true }} initial={{opacity:0}} whileInView={{opacity:1}} transition={{ type: "spring",stiffness:30, delay: 0.6 }} className="bg-clip-text text-transparent bg-gradient-to-br mt-10 text-xl from-white to-slate-400 sm:w-[950px] w-[300px]">
           a mastermind of the digital world, a full stack web developer and
           frontend enthusiast who is truly passionate about programming. Meet
           Arshad yaseen, the creative genius behind some of the most modern and
@@ -82,21 +86,15 @@ function About() {
           has an eye for design and a keen sense of aesthetics, resulting in
           websites that are as beautiful as they are useful.
         </motion.p>
+
+       <div className="flex items-center justify-center mt-8">
+        <motion.div viewport={{ once: true }} initial={{opacity:0}} whileInView={{opacity:1}} transition={{ type: "spring",stiffness:30, delay: 0.3 }} className="py-1.5 flex items-center justify-center bg-gradient-to-r from-[#56DEF0] to-[#AFFD5A] px-6 rounded-full bg-slate-900 mr-3 text-black">Full stack developer</motion.div>
+        <motion.div viewport={{ once: true }} initial={{opacity:0}} whileInView={{opacity:1}} transition={{ type: "spring",stiffness:30, delay: 0.5 }} className="py-1.5 flex items-center justify-center bg-gradient-to-r from-[#56DEF0] to-[#AFFD5A] px-6 rounded-full bg-slate-900 mr-3 text-black">Frontend enthusiast</motion.div>
+        <motion.div viewport={{ once: true }} initial={{opacity:0}} whileInView={{opacity:1}} transition={{ type: "spring",stiffness:30, delay: 0.7 }} className="py-1.5 flex items-center justify-center bg-gradient-to-r from-[#56DEF0] to-[#AFFD5A] px-6 rounded-full bg-slate-900 mr-3 text-black">Creative designer</motion.div>
+       </div>
+
       </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ type: "just", stiffness: 30 }}
-        className="overflow-hidden"
-      >
-        <Image
-          src={HeroGradient}
-          alt="herogradient"
-          priority={true}
-          className="absolute -right-[300px] rotate-45 blur-3xl -bottom-[500px] h-[600px] z-0"
-        />
-      </motion.div>
 
     </div>
   );
